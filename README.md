@@ -1,10 +1,48 @@
-# Foodcartcatering.com
+# Food Cart Catering
 
-A proof of concept for developing a web application to coordinate catering from food carts to office events.
+# Table of Contents
+1. [Summary](#summary)
+2. [Author](#author)
+3. [Setup](#setup)
+4. [Goals](#goals)
+5. [Features](#features)
+6. [Issues](#issues)
+7. [Wishlist](#wishlist)
+8. [IP](#ip)
 
-# Jay Freeman, Carlos Munoz Kampff, Clayton Collins, Benjamin T. Seaver, and David Quisenberry
+## Summary
 
-# Project description
+A proof of concept web application for developing a web application to coordinate catering from food carts to office events.
+
+## Author
+
+Jay Freeman, Carlos Munoz Kampff, Clayton Collins, Benjamin T. Seaver, and David Quisenberry
+
+## Setup
+
+1. `npm install`
+2. `bower install`
+3. Create an account on Google Firebase
+4. Allow for email user authentication on your firebase app
+5. Create an account for a google maps API key
+6. In project root, create file: `src/app/api-keys.ts` and edit the file to contain:
+`export const masterApiKeys = {
+googleMapsApiKey: your-google-maps-api-key,
+apiKey: your-firebase-api-key,
+authDomain: 'your-auth-domain.firebaseapp.com',
+databaseURL: 'your-database-url.firebaseio.com',
+projectId: 'your-project-id',
+storageBucket: 'your-storage-bucket.appspot.com',
+messagingSenderId: 'your-messaging-senderID'
+};
+`
+7. `npm serve`
+
+## Goals
+
+- Build a prototype site for a food cart catering business.
+
+## Features
 
 Three unique user stories:
 
@@ -34,32 +72,19 @@ Deliverer Contractor | Preferred Viewport: Mobile Phone
   - mark orders as picked up
   - mark orders as delivered
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## Issues
 
-## Development server
+  - Orders being doubled in food cart screen after accepting an order
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Wishlist
 
-## Build
+  - credit card processing
+  - yelp api integration food cart owners to not have to enter as much information and for viewers to build up demand for a food cart
+  - stripe credit card processing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## IP
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## AngularMaps installation
-Epicodus-1A:foodcartcatering Guest$ npm install angular2-google-maps --save
+Copyright
+Jay Freeman, Carlos Munoz Kampff, Clayton Collins, Benjamin T. Seaver, and David Quisenberry 2017
